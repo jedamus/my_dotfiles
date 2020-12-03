@@ -1,0 +1,14 @@
+# ~/.mkshrc
+#echo "ich bin .mkshrc"
+
+export PS1=$'\e[33m\e[44mk\e[34m\e[43m${USER:=$(id -un)}@${HOSTNAME:=$(hostname)}\e[39m\e[49m $(date +"%H:%M") (\!) \e[32m$PWD\e[0m '"$(if (( USER_ID )); then print \$; else print \#; fi) "
+
+##+## Leander Jedamus
+if [ -z "$SHLVL" ]; then
+  export SHLVL=2
+  export EXPORT="export"
+  export EQ="="
+  source $HOME/.shenv
+  unset EXPORT EQ
+fi
+

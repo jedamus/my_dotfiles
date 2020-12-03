@@ -1,0 +1,17 @@
+channels:
+- channel
+- https://conda.anaconda.org/t/<token>/<channel2>
+- http://conda.anaconda.org/<channel1>
+- defaults
+create_default_packages:
+- anaconda-client
+- ipykernel
+# Default channels is needed for when users override the system .condarc
+# with ~/.condarc. This ensures that "defaults" maps to your Anaconda Repository and not
+# repo.anaconda.com
+default_channels:
+- http://<your Anaconda Repository name>:8080/conda/anaconda
+- http://<your Anaconda Repository name>:8080/conda/wakari
+- http://<your Anaconda Repository name>:8080/conda/r-channel
+# Note: You must add the "conda" subdirectory to the end
+channel_alias: http://<your Anaconda Repository name:8080/conda

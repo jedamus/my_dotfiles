@@ -1,0 +1,17 @@
+source $HOME/.cshrc
+
+if ($?prompt) then
+  if ($?DISPLAY) then
+
+    cd $HOME
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if ( -f "./anaconda3/etc/profile.d/conda.csh" ) then
+    source "./anaconda3/etc/profile.d/conda.csh"
+else
+    setenv PATH "./anaconda3/bin:$PATH"
+endif
+# <<< conda initialize <<<
+  endif
+endif
+

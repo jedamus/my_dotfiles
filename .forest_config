@@ -1,0 +1,4 @@
+[Rigetti Forest]
+qpy_endpoint_address=None
+qvm_address=http://localhost:5000
+compiler_server_address=tcp://localhost:5555
