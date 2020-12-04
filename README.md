@@ -2,11 +2,11 @@
 
 This is my collection of dotfiles.
 
-## install
+## Getting started
 
 change to dotfile-directory and cast the following copy-command:
 
 ```
 cd $HOME/dotfiles
-cp -Rvp .* $HOME
+cp -vp .* $HOME
 ```
