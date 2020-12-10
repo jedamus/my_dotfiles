@@ -7,6 +7,6 @@ This is my collection of dotfiles.
 change to dotfile-directory and cast the following copy-command:
 
 ```
-cd $HOME/dotfiles
-cp -vp .* $HOME
+cd $HOME/dotfiles/files
+cp -Rvp .[a-zA-Z0-9_]* $HOME
 ```
