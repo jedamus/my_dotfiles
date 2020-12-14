@@ -4,9 +4,8 @@ This is my collection of dotfiles.
 
 ## Getting started
 
-change to dotfile-directory and cast the following copy-command:
+change to dotfile-directory and use the installation-script:
 
 ```
-cd $HOME/dotfiles/files
-cp -Rvp .[a-zA-Z0-9_]* $HOME
+sh ./install.sh
 ```
