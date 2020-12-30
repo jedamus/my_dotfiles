@@ -27,5 +27,8 @@ ssh-keygen -b 4096 -t rsa -f id_rsa_2
 Then edit ~/.ssh/config to use this file (the -f part):
 
 ```
+...
+Host another_machine
 IdentityFile ~/.ssh/id_rsa_2
+...
 ```
