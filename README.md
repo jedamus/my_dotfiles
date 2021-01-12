@@ -38,5 +38,6 @@ You have to copy the public key to another machine and do the following:
 ```
 scp id_rsa_2.pub user@another_machine:~/.ssh
 ssh user@another_machine
+cd .ssh
 cat id_rsa_2.pub >> authorized_keys
 ```
