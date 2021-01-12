@@ -32,3 +32,11 @@ Host another_machine
 IdentityFile ~/.ssh/id_rsa_2
 ...
 ```
+
+You have to copy the public key to another machine and do the following:
+
+```
+scp id_rsa_2.pub user@another_machine:~/.ssh
+ssh user@another_machine
+cat id_rsa_2.pub >> authorized_keys
+```
