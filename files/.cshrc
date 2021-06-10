@@ -45,7 +45,7 @@ if ($?prompt) then
   endif
 endif
 
-set shlvl=3
+set shlvl=1
 if ($SHLVL == $shlvl) then
   setenv EXPORT "setenv"
   setenv EQ " "
