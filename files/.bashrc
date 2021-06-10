@@ -120,7 +120,8 @@ if ! shopt -oq posix; then
 fi
 
 ##+## Leander Jedamus
-if [ $SHLVL -eq 1 ]; then
+. $HOME/.shlvl
+if [ $SHLVL -eq $shlvl ]; then
   export EXPORT="export"
   export EQ="="
   source $HOME/.shenv
