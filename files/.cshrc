@@ -1,14 +1,15 @@
 set noclobber
 
 if ($?prompt) then
-  set prompt="%{\033[1;33;44m%}t%{\033[0;36;40m%}%n@%m%{\033[0m%} %T [%{\033[0;36;10m%}%c1%{\033[0m%}] $ "
+  set prompt="%{\033[1;33;44m%}t%{\033[0;34;43m%}%n@%m%{\033[0m%} %T [%{\033[0;34m%}%c1%{\033[0m%}] $ "
   set nobeep
   set fignore = (.o .out .aux .log .toc .ind .ilg .idx)
   set savedirs
 
-  if (-x /usr/bin/fortune) then
+  set f=/usr/games/fortune
+  if (-x $f) then
     echo
-    /usr/bin/fortune
+    $f
     echo
   endif
 
@@ -44,7 +45,8 @@ if ($?prompt) then
   endif
 endif
 
-if ($SHLVL == 1) then
+set shlvl=3
+if ($SHLVL == $shlvl) then
   setenv EXPORT "setenv"
   setenv EQ " "
   source $HOME/.shenv
