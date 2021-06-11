@@ -1,7 +1,7 @@
 set noclobber
 
 if ($?prompt) then
-  set prompt="%{\033[1;33;44m%}t%{\033[0;34;43m%}%n@%m%{\033[0m%} %T [%{\033[0;34m%}%c1%{\033[0m%}] $ "
+  set prompt="%{\033[1;33;44m%}t%{\033[0;34;43m%}%n@%m%{\033[0m%} %T [%{\033[1;34m%}%c1%{\033[0m%}] $ "
   set nobeep
   set fignore = (.o .out .aux .log .toc .ind .ilg .idx)
   set savedirs
@@ -45,11 +45,12 @@ if ($?prompt) then
   endif
 endif
 
-set shlvl=1
+setenv EXPORT "setenv"
+setenv EQ " "
+source $HOME/.shlvl
 if ($SHLVL == $shlvl) then
-  setenv EXPORT "setenv"
-  setenv EQ " "
   source $HOME/.shenv
-  unsetenv EXPORT
-  unsetenv EQ
 endif
+unsetenv EXPORT
+unsetenv EQ
+unsetenv shlvl
