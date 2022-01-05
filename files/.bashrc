@@ -122,13 +122,14 @@ fi
 export EXPORT="export"
 export EQ="="
 source $HOME/.shlvl
-if [ $SHLVL -eq $shlvl ]; then
+if [ -z "$HAS_ENV" ]; then
   source $HOME/.shenv
 fi
 unset EXPORT EQ
 
 [ -r ./.byobu/prompt ] && . ./.byobu/prompt   #byobu-prompt#
 
+if [ -z "$HAS_ENV" ]; then
 cd $HOME
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -144,4 +145,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+fi
 
+export HAS_ENV="true"
