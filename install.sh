@@ -13,7 +13,7 @@ tak=/tmp/authorized_keys
 
 if [ -f $ak ]; then
   no_replace=TRUE
-  cp -p $ak $tak
+  cp -vp $ak $tak
 fi
 
 cd files
@@ -25,7 +25,7 @@ chmod 700 $HOME/.ssh
 chmod 600 $ak
 
 if [ ! -z $no_replace ]; then
-  mv $tak $ak
+  mv -v $tak $ak
 fi
 
 # vim:ai sw=2
