@@ -8,12 +8,21 @@
 ## HOME=$HOME/repositories
 ## mkdir -p $HOME
 
-ak=$HOME/.ssh/authorized_keys
-tak=/tmp/authorized_keys
+dir=$HOME/.ssh
+tmp=/tmp
+ak=$dir/authorized_keys
+co=$dir/config
+tak=$tmp/authorized_keys
+tco=$tmp/config
 
 if [ -f $ak ]; then
-  no_replace=TRUE
+  ak_replace=TRUE
   cp -vp $ak $tak
+fi
+
+if [ -f $co ]; then
+  co_replace=TRUE
+  cp -vp $co $tco
 fi
 
 cd files
@@ -24,8 +33,12 @@ cd ..
 chmod 700 $HOME/.ssh
 chmod 600 $ak
 
-if [ ! -z $no_replace ]; then
+if [ ! -z $ak_replace ]; then
   mv -v $tak $ak
+fi
+
+if [ ! -z $co_replace ]; then
+  mv -v $tco $co
 fi
 
 # vim:ai sw=2
