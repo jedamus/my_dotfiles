@@ -4,6 +4,8 @@ This is my collection of dotfiles.
 
 ## Getting started
 
+Please note that calling the installation-script will overwrite existing dotfiles! So DO save your beloved ```.bashrc```!
+
 change to dotfile-directory and use the installation-script:
 
 ```
