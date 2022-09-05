@@ -8,13 +8,13 @@ Please note that calling the installation-script will overwrite existing dotfile
 
 change to dotfile-directory and use the installation-script:
 
-```
+```sh
 sh ./install.sh
 ```
 
 When you have machines, which should ssh to your machine, do the following:
 
-```
+```sh
 cd ~/.ssh
 cat other_machine.pub >> authorized_keys
 ```
@@ -22,7 +22,7 @@ cat other_machine.pub >> authorized_keys
 If you want to connect to another machine, create a private/public key pair
 like this:
 
-```
+```sh
 cd ~/.ssh
 ssh-keygen -b 4096 -t rsa -f id_rsa_2
 ```
@@ -38,7 +38,7 @@ IdentityFile ~/.ssh/id_rsa_2
 
 You have to copy the public key to another machine and do the following:
 
-```
+```sh
 scp id_rsa_2.pub user@another_machine:~/.ssh
 ssh user@another_machine
 cd ~/.ssh
