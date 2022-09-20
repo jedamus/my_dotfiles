@@ -54,4 +54,3 @@ if (! $?HAS_ENV) then
 endif
 unsetenv EXPORT
 unsetenv EQ
-unsetenv shlvl
