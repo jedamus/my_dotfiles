@@ -12,10 +12,10 @@ export PS1='k ${USER:=$(id -un)}@${HOSTNAME:=$(hostname)} $(date +"%H:%M") (\!) 
 ##+## Leander Jedamus
 export EXPORT="export"
 export EQ="="
-source $HOME/.shlvl
+#source $HOME/.shlvl
 if [ -z $HAS_ENV ]; then
   source $HOME/.shenv
   export HAS_ENV="true"
 fi
-unset EXPORT EQ shlvl
+unset EXPORT EQ
 

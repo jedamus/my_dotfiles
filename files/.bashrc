@@ -121,15 +121,15 @@ fi
 ##+## Leander Jedamus
 export EXPORT="export"
 export EQ="="
-source $HOME/.shlvl
+#source $HOME/.shlvl
 if [ -z "$HAS_ENV" ]; then
   source $HOME/.shenv
+  export HAS_ENV="true"
 fi
 unset EXPORT EQ
 
 [ -r ./.byobu/prompt ] && . ./.byobu/prompt   #byobu-prompt#
 
-if [ -z "$HAS_ENV" ]; then
 cd $HOME
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -145,6 +145,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-fi
 
-export HAS_ENV="true"

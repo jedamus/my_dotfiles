@@ -47,7 +47,7 @@ endif
 
 setenv EXPORT "setenv"
 setenv EQ " "
-source $HOME/.shlvl
+#source $HOME/.shlvl
 if (! $?HAS_ENV) then
   source $HOME/.shenv
   setenv HAS_ENV "true"
