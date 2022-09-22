@@ -5,6 +5,8 @@ if ($?prompt) then
   set nobeep
   set fignore = (.o .out .aux .log .toc .ind .ilg .idx)
   set savedirs
+  set savehist
+  set histfile = ~/.csh_history
 
   set f=/usr/games/fortune
   if (-x $f) then
@@ -47,10 +49,10 @@ endif
 
 setenv EXPORT "setenv"
 setenv EQ " "
-#source $HOME/.shlvl
-if (! $?HAS_ENV) then
+source $HOME/.shlvl
+if ($SHLVL == $shlvl) then
   source $HOME/.shenv
-  setenv HAS_ENV "true"
 endif
 unsetenv EXPORT
 unsetenv EQ
+unsetenv shlvl
