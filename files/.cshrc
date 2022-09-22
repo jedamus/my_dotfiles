@@ -52,8 +52,8 @@ if ($?prompt) then
     bindkey		[5~ history-search-backward
     bindkey		[6~ history-search-forward
   endif
-  if (-r $HOME/.csh_dirs) then
-    source $HOME/.csh_dirs
+  if (-r $dirsfile) then
+    source $dirsfile
   endif
 endif
 
