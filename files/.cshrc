@@ -6,8 +6,7 @@ if ($?prompt) then
   set fignore = (.o .out .aux .log .toc .ind .ilg .idx)
   set savedirs
   set dirsfile = ~/.csh_dirs
-  set savehist = (10000 merge)
-  ## set savehist
+  set savehist = (20000 merge)
   set histfile = ~/.csh_history
 
   set f=/usr/games/fortune
