@@ -5,6 +5,7 @@ if ($?prompt) then
   set nobeep
   set fignore = (.o .out .aux .log .toc .ind .ilg .idx)
   set savedirs
+  set dirsfile = ~/.csh_dirs
   set savehist
   set histfile = ~/.csh_history
 
