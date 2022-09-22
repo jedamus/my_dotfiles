@@ -19,3 +19,6 @@ if [ -z $HAS_ENV ]; then
 fi
 unset EXPORT EQ
 
+# setting HISTFILE
+HISTFILE=~/.ksh_history
+
