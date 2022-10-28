@@ -34,6 +34,7 @@ $EXPORT PY_ENV_DIR$EQ"env"
 
 $EXPORT RUSTUP_HOME$EQ"${HOME}/.rustup"
 $EXPORT CARGO_HOME$EQ"${HOME}/.cargo"
+$EXPORT PLATFORM$EQ"stable-armv7-unknown-linux-gnueabihf"
 
 $EXPORT PATH$EQ"${HOME}/bin:${CARGO_HOME}/bin:${PATH}:."
-$EXPORT MANPATH$EQ"${RUSTUP_HOME}/toolchains/stable-armv7-unknown-linux-gnueabihf/share/man:${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
+$EXPORT MANPATH$EQ"${RUSTUP_HOME}/toolchains/${PLATFORM}/share/man:${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
