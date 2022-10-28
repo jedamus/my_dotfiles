@@ -1,4 +1,4 @@
-$EXPORT PATH$EQ"${HOME}/bin:${PATH}:."
+$EXPORT PATH$EQ"${HOME}/bin:${HOME}/.cargo/bin:${PATH}:."
 $EXPORT MANPATH$EQ"${HOME}/anaconda3/share/man:/usr/local/man:/usr/local/share/man:/usr/man:/usr/share/man:."
 #$EXPORT COMPILER_URL$EQ"tcp://127.0.0.1:5555"
 $EXPORT FOREST_CONFIG$EQ"${HOME}/.forest_config"
